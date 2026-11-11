@@ -1,0 +1,108 @@
+{
+  "dataset": "samples/manifest.json, set=text_pdf (synthetic template documents)",
+  "documents_in_dataset": 24,
+  "documents_evaluated": 24,
+  "documents_not_evaluated": [],
+  "provider": "scripted-test-double",
+  "document_type_accuracy": {
+    "correct": 24,
+    "total": 24
+  },
+  "field_accuracy": {
+    "date_of_birth": {
+      "correct": 12,
+      "total": 12
+    },
+    "employer_name": {
+      "correct": 6,
+      "total": 6
+    },
+    "full_name": {
+      "correct": 24,
+      "total": 24
+    },
+    "gross_salary": {
+      "correct": 6,
+      "total": 6
+    },
+    "id_number": {
+      "correct": 12,
+      "total": 12
+    },
+    "net_salary": {
+      "correct": 6,
+      "total": 6
+    },
+    "pay_period": {
+      "correct": 6,
+      "total": 6
+    }
+  },
+  "rule_accuracy": {
+    "correct": 12,
+    "total": 12,
+    "cases": [
+      {
+        "file": "synthetic_asha_pan_png.png",
+        "expected": "MATCH",
+        "got": "MATCH"
+      },
+      {
+        "file": "synthetic_asha_salary_slip_jpeg.jpg",
+        "expected": "MATCH",
+        "got": "MATCH"
+      },
+      {
+        "file": "synthetic_rohan_pan_jpeg.jpg",
+        "expected": "MATCH",
+        "got": "MATCH"
+      },
+      {
+        "file": "synthetic_rohan_salary_slip_scanned_pdf.pdf",
+        "expected": "MATCH",
+        "got": "MATCH"
+      },
+      {
+        "file": "synthetic_meera_pan_scanned_pdf.pdf",
+        "expected": "MATCH",
+        "got": "MATCH"
+      },
+      {
+        "file": "synthetic_meera_salary_slip_pdf.pdf",
+        "expected": "MATCH",
+        "got": "MATCH"
+      },
+      {
+        "file": "synthetic_kabir_pan_pdf.pdf",
+        "expected": "MATCH",
+        "got": "MATCH"
+      },
+      {
+        "file": "synthetic_kabir_salary_slip_png.png",
+        "expected": "MATCH",
+        "got": "MATCH"
+      },
+      {
+        "file": "synthetic_priya_pan_png.png",
+        "expected": "MATCH",
+        "got": "MATCH"
+      },
+      {
+        "file": "synthetic_priya_salary_slip_jpeg.jpg",
+        "expected": "MISMATCH",
+        "got": "MISMATCH"
+      },
+      {
+        "file": "synthetic_arjun_pan_jpeg.jpg",
+        "expected": "MATCH",
+        "got": "MATCH"
+      },
+      {
+        "file": "synthetic_arjun_salary_slip_scanned_pdf.pdf",
+        "expected": "MATCH",
+        "got": "MATCH"
+      }
+    ]
+  },
+  "caveat": "Synthetic, template-generated documents only. Not representative of real-world scans."
+}

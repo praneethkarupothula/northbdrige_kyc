@@ -1,0 +1,120 @@
+{
+  "dataset": "samples/manifest.json, set=mixed (synthetic template documents)",
+  "documents_in_dataset": 24,
+  "documents_evaluated": 6,
+  "documents_not_evaluated": [
+    {
+      "file": "synthetic_asha_pan_png.png",
+      "reason": "OCR_UNAVAILABLE (Tesseract not installed)"
+    },
+    {
+      "file": "synthetic_asha_salary_slip_jpeg.jpg",
+      "reason": "OCR_UNAVAILABLE (Tesseract not installed)"
+    },
+    {
+      "file": "synthetic_asha_bank_statement_scanned_pdf.pdf",
+      "reason": "OCR_UNAVAILABLE (Tesseract not installed)"
+    },
+    {
+      "file": "synthetic_rohan_aadhaar_png.png",
+      "reason": "OCR_UNAVAILABLE (Tesseract not installed)"
+    },
+    {
+      "file": "synthetic_rohan_pan_jpeg.jpg",
+      "reason": "OCR_UNAVAILABLE (Tesseract not installed)"
+    },
+    {
+      "file": "synthetic_rohan_salary_slip_scanned_pdf.pdf",
+      "reason": "OCR_UNAVAILABLE (Tesseract not installed)"
+    },
+    {
+      "file": "synthetic_meera_aadhaar_jpeg.jpg",
+      "reason": "OCR_UNAVAILABLE (Tesseract not installed)"
+    },
+    {
+      "file": "synthetic_meera_pan_scanned_pdf.pdf",
+      "reason": "OCR_UNAVAILABLE (Tesseract not installed)"
+    },
+    {
+      "file": "synthetic_meera_bank_statement_png.png",
+      "reason": "OCR_UNAVAILABLE (Tesseract not installed)"
+    },
+    {
+      "file": "synthetic_kabir_aadhaar_scanned_pdf.pdf",
+      "reason": "OCR_UNAVAILABLE (Tesseract not installed)"
+    },
+    {
+      "file": "synthetic_kabir_salary_slip_png.png",
+      "reason": "OCR_UNAVAILABLE (Tesseract not installed)"
+    },
+    {
+      "file": "synthetic_kabir_bank_statement_jpeg.jpg",
+      "reason": "OCR_UNAVAILABLE (Tesseract not installed)"
+    },
+    {
+      "file": "synthetic_priya_pan_png.png",
+      "reason": "OCR_UNAVAILABLE (Tesseract not installed)"
+    },
+    {
+      "file": "synthetic_priya_salary_slip_jpeg.jpg",
+      "reason": "OCR_UNAVAILABLE (Tesseract not installed)"
+    },
+    {
+      "file": "synthetic_priya_bank_statement_scanned_pdf.pdf",
+      "reason": "OCR_UNAVAILABLE (Tesseract not installed)"
+    },
+    {
+      "file": "synthetic_arjun_aadhaar_png.png",
+      "reason": "OCR_UNAVAILABLE (Tesseract not installed)"
+    },
+    {
+      "file": "synthetic_arjun_pan_jpeg.jpg",
+      "reason": "OCR_UNAVAILABLE (Tesseract not installed)"
+    },
+    {
+      "file": "synthetic_arjun_salary_slip_scanned_pdf.pdf",
+      "reason": "OCR_UNAVAILABLE (Tesseract not installed)"
+    }
+  ],
+  "provider": "scripted-test-double",
+  "document_type_accuracy": {
+    "correct": 6,
+    "total": 6
+  },
+  "field_accuracy": {
+    "date_of_birth": {
+      "correct": 3,
+      "total": 3
+    },
+    "employer_name": {
+      "correct": 1,
+      "total": 1
+    },
+    "full_name": {
+      "correct": 6,
+      "total": 6
+    },
+    "gross_salary": {
+      "correct": 1,
+      "total": 1
+    },
+    "id_number": {
+      "correct": 3,
+      "total": 3
+    },
+    "net_salary": {
+      "correct": 1,
+      "total": 1
+    },
+    "pay_period": {
+      "correct": 1,
+      "total": 1
+    }
+  },
+  "rule_accuracy": {
+    "correct": 0,
+    "total": 0,
+    "cases": []
+  },
+  "caveat": "Synthetic, template-generated documents only. Not representative of real-world scans."
+}

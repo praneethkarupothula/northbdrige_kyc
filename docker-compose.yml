@@ -1,0 +1,43 @@
+# Local full stack. Copy backend/.env.example to backend/.env and set secrets first.
+# For Neon: set DATABASE_URL / MIGRATION_DATABASE_URL in backend/.env and remove the `db` service.
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: nbkyc
+      POSTGRES_PASSWORD: nbkyc-local-only
+      POSTGRES_DB: nbkyc
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck: { test: ["CMD-SHELL", "pg_isready -U nbkyc"], interval: 5s, retries: 10 }
+
+  migrate:
+    build: ./backend
+    env_file: backend/.env
+    environment: &dbenv
+      DATABASE_URL: ${DATABASE_URL:-postgresql://nbkyc:nbkyc-local-only@db:5432/nbkyc}
+    command: ["python", "-m", "app.cli", "migrate"]
+    depends_on: { db: { condition: service_healthy } }
+
+  api:
+    build: ./backend
+    env_file: backend/.env
+    environment: *dbenv
+    volumes: [storage:/data/storage]
+    depends_on: { migrate: { condition: service_completed_successfully } }
+
+  worker:
+    build: ./backend
+    env_file: backend/.env
+    environment: *dbenv
+    command: ["python", "-m", "app.cli", "worker"]
+    volumes: [storage:/data/storage]
+    depends_on: { migrate: { condition: service_completed_successfully } }
+
+  web:
+    build: ./frontend
+    ports: ["8080:80"]
+    depends_on: [api]
+
+volumes:
+  pgdata:
+  storage:

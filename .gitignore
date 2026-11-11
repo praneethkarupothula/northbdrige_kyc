@@ -1,0 +1,20 @@
+# secrets and local data
+.env
+backend/.env
+backend/var/
+*.db
+# python
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+# node
+node_modules/
+frontend/dist/
+frontend/test-results/
+frontend/playwright-report/
+tests/e2e/.fixtures/
+
+# OS metadata and report rendering intermediates
+.DS_Store
+tmp/pdfs/
