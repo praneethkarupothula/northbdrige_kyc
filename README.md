@@ -4,7 +4,7 @@ A full-stack applicant onboarding and document-consistency review application. A
 
 > **Scope:** A successful result means the submitted names and PAN numbers agree. This application does not authenticate documents against UIDAI or Income Tax Department records, prove identity, or make loan/credit decisions. Synthetic identifiers can be used for testing; their validity warnings are informational and they are not registered as verified identities.
 
-## Contents
+## Contents 
 
 - [Features](#features)
 - [Matching rules](#matching-rules)
